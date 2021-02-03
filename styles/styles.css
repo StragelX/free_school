@@ -955,4 +955,21 @@ footer {
   text-align: center;
   color: #413e6f;
 }
+
+.why_we {
+  padding-top: 63px;
+}
+
+.why_we .why_wrap {
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.why_we .why_wrap .one {
+  flex: 1 1 30%;
+  max-width: 30%;
+  outline: 1px solid red;
+  height: 45px;
+  margin-bottom: 65px;
+}
 /*# sourceMappingURL=styles.css.map */

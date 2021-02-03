@@ -265,3 +265,20 @@ footer {
     }
   }
 }
+
+.why_we {
+  padding-top: 63px;
+
+  .why_wrap {
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .one {
+      flex: 1 1 30%;
+      max-width: 30%;
+      outline: 1px solid red;
+      height: 45px;
+      margin-bottom: 65px;
+    }
+  }
+}
