@@ -1,0 +1,267 @@
+@import "basic.scss";
+@import "grid";
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: auto;
+}
+
+header {
+  flex: none;
+  height: 81px;
+  width: 100%;
+  background: #413e6f;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .logo {
+    height: 62px;
+  }
+
+  nav {
+    a,
+    span,
+    .drop_down {
+      font-family: Plumb;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      color: #ffffff;
+      cursor: pointer;
+
+      & + a,
+      & + .drop_down {
+        margin-left: 83px;
+      }
+    }
+
+    .drop_down {
+      .drop {
+        top: 100%;
+        left: -30px;
+        position: absolute;
+        width: 184px;
+        padding: 54px 6px 23px 22px;
+        background-color: #413e6f;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 360ms;
+
+        a {
+          display: block;
+          font-family: Plumb;
+          font-size: 16px;
+          line-height: 1.4;
+          text-align: left;
+          color: #ffffff;
+          font-weight: 400;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &.active {
+            font-weight: 900;
+          }
+
+          & + a {
+            margin-left: auto;
+          }
+        }
+      }
+
+      &:hover {
+        .drop {
+          opacity: 1;
+          transition: opacity 360ms;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  flex: none;
+  height: 190px;
+  background: #413e6f;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big_container {
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.df {
+  display: flex;
+  align-items: center;
+
+  &.s_betwen {
+    justify-content: space-between;
+  }
+}
+
+.top_section {
+  height: 900px;
+  padding-top: 81px;
+  background: url("../img/top_bg.jpg") no-repeat center / contain;
+
+  .big_logo {
+    margin-top: 30px;
+  }
+
+  .centered_paper {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 730px;
+    height: 330px;
+    background: url("../img/top_paper.png") no-repeat center / contain;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: 100px;
+      width: 70px;
+      height: 81px;
+      background: url("../img/paperclip.svg") no-repeat center / contain;
+    }
+
+    &:after {
+      content: "Вчимо творити майбутнє!";
+      position: absolute;
+      top: 120px;
+      left: 114px;
+      width: 526px;
+      height: 72px;
+      transform: rotate(-10deg);
+      font-family: Plumb;
+      font-size: 60px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: 1.2;
+      text-align: center;
+      color: #413e6f;
+    }
+  }
+
+  .under_paper {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 706px;
+    padding: 11px 48px 18px;
+    background-color: #413e6f;
+    font-family: Plumb;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.78;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .assigne_btn {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: #d25e3c;
+    width: 220px;
+    height: 64px;
+    font-family: Plumb;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .scroll_screen {
+    position: absolute;
+    left: 50%;
+    top: 690px;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: url("../img/mouse_icon.png") no-repeat center / contain;
+  }
+}
+
+.online_school {
+  padding-top: 128px;
+  padding-bottom: 100px;
+
+  h1,
+  .subtitle {
+    font-family: Plumb;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.78;
+    letter-spacing: normal;
+    text-align: center;
+    color: #413e6f;
+  }
+
+  .subtitle {
+    margin-top: 24px;
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-stretch: condensed;
+  }
+
+  .stats {
+    .num {
+      font-size: 64px;
+      letter-spacing: normal;
+      color: #fa6e00;
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      font-family: Plumb;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: 2.11;
+      letter-spacing: 0.36px;
+      text-align: center;
+      color: #413e6f;
+    }
+  }
+}

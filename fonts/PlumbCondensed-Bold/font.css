@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'PlumbCondensed-Bold';
+  src: url('PlumbCondensed-Bold.eot');
+  src: url('PlumbCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+       url('PlumbCondensed-Bold.svg#PlumbCondensed-Bold') format('svg'),
+       url('PlumbCondensed-Bold.ttf') format('truetype'),
+       url('PlumbCondensed-Bold.woff') format('woff'),
+       url('PlumbCondensed-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

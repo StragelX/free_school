@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Plumb-Black';
+  src: url('Plumb-Black.svg#Plumb-Black') format('svg'),
+       url('Plumb-Black.ttf') format('truetype'),
+       url('Plumb-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'plumb-black';
+  src: url('plumb-black.eot');
+  src: url('plumb-black.eot?#iefix') format('embedded-opentype'),
+       url('plumb-black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

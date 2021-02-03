@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'PlumbCondensed-Regular';
+  src: url('PlumbCondensed-Regular.svg#PlumbCondensed-Regular') format('svg'),
+       url('PlumbCondensed-Regular.ttf') format('truetype'),
+       url('PlumbCondensed-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'plumbcondensed-regular';
+  src: url('plumbcondensed-regular.eot');
+  src: url('plumbcondensed-regular.eot?#iefix') format('embedded-opentype'),
+       url('plumbcondensed-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

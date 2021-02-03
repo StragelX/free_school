@@ -1,0 +1,125 @@
+$xs: #{"(max-width: 767px)"};
+$s: #{"(min-width: 768px) and (max-width: 1000px)"};
+$sm: #{"(min-width: 1001px) and (max-width: 1025px)"};
+$m: #{"(min-width: 1025px)"};
+
+$grid-count: 12;
+$grid-padding: 15px;
+$col-name: col;
+$grid-prefix: xs s sm m;
+
+@mixin col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+}
+
+// ****** for css ******************
+
+.row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="#{$col-name}-"] {
+  flex: none;
+  min-height: 1px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+  box-sizing: border-box;
+}
+
+// finish grid ----------------------
+
+@for $i from 1 through $grid-count {
+  .#{$col-name}-#{$i} {
+    min-width: $i * (100% / $grid-count);
+    max-width: $i * (100% / $grid-count);
+    flex-basis: $i * (100% / $grid-count);
+  }
+}
+
+// Media
+
+@mixin make-grid($size) {
+  .#{$size}-hide {
+    display: none !important;
+  }
+  .#{$size}-show {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .#{$size}-show_b {
+    display: block !important;
+  }
+  .col-#{$size}-auto {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .col-#{$size} {
+    @include col;
+  }
+}
+
+@media #{$xs} {
+  @include make-grid(xs);
+  $col-name: col-xs;
+  @for $i from 1 through $grid-count {
+    .#{$col-name}-#{$i} {
+      min-width: $i * (100% / $grid-count);
+      max-width: $i * (100% / $grid-count);
+      flex-basis: $i * (100% / $grid-count);
+    }
+  }
+}
+
+@media #{$s} {
+  @include make-grid(s);
+  $col-name: col-s;
+  @for $i from 1 through $grid-count {
+    .#{$col-name}-#{$i} {
+      min-width: $i * (100% / $grid-count);
+      max-width: $i * (100% / $grid-count);
+      flex-basis: $i * (100% / $grid-count);
+    }
+  }
+}
+
+@media #{$sm} {
+  @include make-grid(sm);
+  $col-name: col-sm;
+  @for $i from 1 through $grid-count {
+    .#{$col-name}-#{$i} {
+      min-width: $i * (100% / $grid-count);
+      max-width: $i * (100% / $grid-count);
+      flex-basis: $i * (100% / $grid-count);
+    }
+  }
+}
+
+@media #{$m} {
+  @include make-grid(m);
+  $col-name: col-m;
+  @for $i from 1 through $grid-count {
+    .#{$col-name}-#{$i} {
+      min-width: $i * (100% / $grid-count);
+      max-width: $i * (100% / $grid-count);
+      flex-basis: $i * (100% / $grid-count);
+    }
+  }
+}
