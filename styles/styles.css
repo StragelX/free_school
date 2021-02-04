@@ -810,7 +810,7 @@ footer {
 }
 
 .top_section {
-  height: 900px;
+  height: 985px;
   padding-top: 81px;
   background: url("../img/top_bg.jpg") no-repeat center/contain;
 }
@@ -821,10 +821,10 @@ footer {
 
 .top_section .centered_paper {
   position: absolute;
-  top: 220px;
+  top: 160px;
   left: 50%;
   transform: translateX(-50%);
-  width: 730px;
+  width: 750px;
   height: 330px;
   background: url("../img/top_paper.png") no-repeat center/contain;
 }
@@ -832,18 +832,18 @@ footer {
 .top_section .centered_paper::before {
   content: "";
   position: absolute;
-  top: -20px;
-  right: 100px;
-  width: 70px;
-  height: 81px;
+  top: -24px;
+  right: 94px;
+  width: 90px;
+  height: 90px;
   background: url("../img/paperclip.svg") no-repeat center/contain;
 }
 
 .top_section .centered_paper:after {
   content: "Вчимо творити майбутнє!";
   position: absolute;
-  top: 120px;
-  left: 114px;
+  top: 126px;
+  left: 123px;
   width: 526px;
   height: 72px;
   transform: rotate(-10deg);
@@ -859,7 +859,7 @@ footer {
 
 .top_section .under_paper {
   position: absolute;
-  top: 500px;
+  top: 413px;
   left: 50%;
   transform: translateX(-50%);
   width: 706px;
@@ -878,7 +878,7 @@ footer {
 
 .top_section .assigne_btn {
   position: absolute;
-  top: 600px;
+  top: 604px;
   left: 50%;
   transform: translateX(-50%);
   width: 220px;
@@ -901,7 +901,7 @@ footer {
 .top_section .scroll_screen {
   position: absolute;
   left: 50%;
-  top: 690px;
+  top: 750px;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
@@ -968,8 +968,27 @@ footer {
 .why_we .why_wrap .one {
   flex: 1 1 30%;
   max-width: 30%;
-  outline: 1px solid red;
-  height: 45px;
   margin-bottom: 65px;
+  padding-top: 15px;
+}
+
+.why_we .why_wrap .one p {
+  font-family: Plumb;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  color: #413e6f;
+  letter-spacing: -0.84px;
+}
+
+.why_we .why_wrap .one:before {
+  content: "";
+  width: 99px;
+  height: 4px;
+  background-color: #fa6e00;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=styles.css.map */
