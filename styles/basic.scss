@@ -58,6 +58,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Plumb;
+  src: url("../fonts/Plumb-Regular/Plumb-Regular.eot");
+  src: url("../fonts/Plumb-Regular/Plumb-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Plumb-Regular/Plumb-Regular.svg#Plumb-Regular") format("svg"),
+    url("../fonts/Plumb-Regular/Plumb-Regular.ttf") format("truetype"),
+    url("../fonts/Plumb-Regular/Plumb-Regular.woff") format("woff"),
+    url("../fonts/Plumb-Regular/Plumb-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;

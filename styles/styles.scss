@@ -109,7 +109,7 @@ footer {
 
   a {
     color: #fff;
-    
+
     img {
       height: 24px;
     }
@@ -256,6 +256,17 @@ footer {
   padding-top: 128px;
   padding-bottom: 100px;
 
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 300px;
+    height: 100px;
+    background: url("../img/why_we_cloud.png") no-repeat center / contain;
+  }
+
   h1,
   .subtitle {
     font-family: Plumb;
@@ -302,8 +313,151 @@ footer {
   }
 }
 
+.who_interested {
+  height: 780px;
+
+  .title {
+    margin-bottom: 50px;
+    color: #fff;
+    padding-top: 83px;
+  }
+
+  .container {
+    z-index: 2;
+    padding-left: 525px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -1px;
+    width: 300px;
+    height: 250px;
+    z-index: 2;
+    background: url("../img/values_cloud.png") no-repeat top right / contain;
+  }
+
+  &:after {
+    z-index: 0;
+    width: 1087px;
+    height: 781px;
+    background-color: #413e6f;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .img_wrap {
+    position: absolute;
+    top: 83px;
+    left: 0;
+    width: 437px;
+    height: 618px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 150px;
+      height: 150px;
+      left: -65px;
+      top: -65px;
+      background: url("../img/3_lines.svg") no-repeat center / contain;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  ul {
+    max-width: 900px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 101px;
+      height: 57px;
+      transform: rotate(0deg);
+      top: 8px;
+      z-index: 1;
+      right: 60px;
+      opacity: 1;
+      transition: opacity 360ms;
+      background: url("../img/wats_in_price_img_arrow.svg") no-repeat
+        center/contain;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+        transition: opacity 360ms;
+      }
+    }
+
+    li {
+      font-family: Plumb;
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.6px;
+      text-align: left;
+      color: #ffffff;
+
+      & + li {
+        margin-top: 15px;
+      }
+
+      &:after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: -40px;
+        bottom: -40px;
+        left: -40px;
+        width: 575px;
+        opacity: 0;
+        transition: opacity 360ms;
+        background: url("../img/who_interested_circle.svg") no-repeat center /
+          contain;
+      }
+
+      &:hover {
+        font-weight: 700;
+
+        &:after {
+          opacity: 1;
+          transition: opacity 360ms;
+        }
+      }
+    }
+  }
+}
+
 .why_we {
   padding-top: 63px;
+  padding-bottom: 100px;
+
+  .title {
+    margin-bottom: 75px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 300px;
+    height: 100px;
+    background: url("../img/why_we_cloud.png") no-repeat center / contain;
+  }
 
   .why_wrap {
     flex-wrap: wrap;
@@ -371,6 +525,130 @@ footer {
   }
 }
 
+.our_values {
+  height: 731px;
+
+  .title {
+    color: #fff;
+    margin-bottom: 58px;
+    padding-top: 80px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -1px;
+    width: 300px;
+    height: 250px;
+    z-index: 2;
+    background: url("../img/values_cloud.png") no-repeat top right / contain;
+  }
+
+  &:after {
+    z-index: 0;
+    width: 1000px;
+    height: 731px;
+    background-color: #413e6f;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    z-index: 2;
+  }
+
+  .img_wrap {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 380px;
+    height: 520px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 150px;
+      height: 150px;
+      left: -65px;
+      top: -65px;
+      background: url("../img/3_lines.svg") no-repeat center / contain;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  ul {
+    max-width: 900px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 57px;
+      transform: rotate(0deg);
+      top: 43px;
+      z-index: 1;
+      left: -119px;
+      opacity: 1;
+      transition: opacity 360ms;
+      background: url("../img/how_to_become_arrow.svg") no-repeat center/contain;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+        transition: opacity 360ms;
+      }
+    }
+
+    li {
+      font-family: Plumb;
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.6px;
+      text-align: left;
+      color: #ffffff;
+      max-width: 345px;
+
+      &:after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: -40px;
+        bottom: -40px;
+        left: -57px;
+        width: 320px;
+        opacity: 0;
+        transition: opacity 360ms;
+        background: url("../img/values_circle.svg") no-repeat center / contain;
+      }
+
+      &:hover {
+        font-weight: 700;
+
+        &:after {
+          opacity: 1;
+          transition: opacity 360ms;
+        }
+      }
+    }
+  }
+}
+
 .our_team {
   p.title {
     margin-top: 82px;
@@ -393,6 +671,51 @@ footer {
       width: 268px;
       flex: none;
       margin-bottom: 47px;
+
+      &:nth-child(1) {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 101px;
+          height: 57px;
+          transform: rotate(46deg);
+          top: 2px;
+          z-index: 1;
+          left: -106px;
+          background: url("../img/how_to_become_arrow.svg") no-repeat center /
+            contain;
+        }
+      }
+
+      &:nth-child(8) {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 101px;
+          height: 57px;
+          transform: rotate(179deg);
+          top: 300px;
+          z-index: 1;
+          right: -78px;
+          background: url("../img/how_to_become_arrow.svg") no-repeat center /
+            contain;
+        }
+      }
+
+      &:nth-child(17) {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 101px;
+          height: 57px;
+          transform: rotate(70deg);
+          top: -100px;
+          z-index: 1;
+          left: -46px;
+          background: url("../img/how_to_become_arrow.svg") no-repeat center /
+            contain;
+        }
+      }
 
       &:after {
         content: "";
@@ -593,6 +916,27 @@ footer {
   background-color: #fa6e00;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 101px;
+    height: 57px;
+    top: 450px;
+    z-index: 1;
+    left: 75px;
+    opacity: 1;
+    transition: opacity 360ms;
+    background: url("../img/video_arrow.svg") no-repeat center / contain;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+      transition: opacity 360ms;
+    }
+  }
 
   .inner {
     align-items: stretch;
@@ -884,6 +1228,20 @@ footer {
     li {
       text-align: center;
 
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -25px;
+        right: -25px;
+        top: -30px;
+        bottom: -30px;
+        opacity: 0;
+        transition: opacity 360ms;
+        background: url("../img/how_to_become_sercle.svg") no-repeat center /
+          contain;
+      }
+
       &:first-child {
         &:before {
           content: "";
@@ -892,12 +1250,41 @@ footer {
           width: 101px;
           height: 57px;
           left: 310px;
+          opacity: 1;
+          transition: opacity 360ms;
           background: url("../img/how_to_become_arrow.svg") no-repeat center;
+        }
+      }
+
+      &:nth-child(2) {
+        &:after {
+          top: -35px;
+          bottom: -35px;
+        }
+      }
+
+      &:hover {
+        font-weight: 700;
+
+        &:after {
+          opacity: 1;
+          transition: opacity 360ms;
         }
       }
 
       & + li {
         margin-top: 40px;
+      }
+    }
+
+    &:hover {
+      li {
+        &:first-child {
+          &:before {
+            opacity: 0;
+            transition: opacity 360ms;
+          }
+        }
       }
     }
   }
@@ -1111,6 +1498,11 @@ footer {
     height: 445px;
     background-color: #c4c4c4;
 
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
     .links_wrap {
       position: absolute;
       bottom: 28px;
@@ -1162,6 +1554,7 @@ footer {
         font-weight: bold;
         line-height: 1.78;
         text-align: left;
+        text-shadow: 0px 0px 12px black;
 
         & + a {
           margin-top: 5px;
@@ -1191,6 +1584,54 @@ footer {
     img {
       margin-bottom: 50px;
       margin-right: 48px;
+    }
+  }
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fa6e00;
+  padding-top: 100px;
+  opacity: 1;
+  transition: opacity 360ms;
+
+  &.hidden {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 360ms;
+  }
+
+  .close {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 25px;
+    height: 28px;
+    background: url("../img/close_icon.svg") no-repeat center / contain;
+  }
+
+  .video_wraper {
+    max-width: 90%;
+    height: 500px;
+    background-color: #ffffff;
+
+    p {
+      padding-top: 190px;
+      padding-left: 100px;
+      font-family: Plumb;
+      font-size: 64px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: 1.13;
+      letter-spacing: normal;
+      text-align: center;
+      color: #413e6f;
     }
   }
 }
