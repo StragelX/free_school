@@ -944,16 +944,39 @@ footer a + a {
   letter-spacing: 1.6px;
   text-align: center;
   color: #ffffff;
+  transition: all ease 0.3s;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.top_section .assigne_btn:hover {
+  color: #f1f1f1;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
 }
 
 .top_section .scroll_screen {
   position: absolute;
-  left: 50%;
+  left: 48.5%;
   top: 735px;
-  transform: translateX(-50%);
   width: 40px;
   height: 40px;
+  animation: 2s bounce infinite;
   background: url("../img/mouse_icon.png") no-repeat center/contain;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .online_school {
@@ -1112,32 +1135,20 @@ footer a + a {
   letter-spacing: -0.6px;
   text-align: left;
   color: #ffffff;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-style: solid;
+  transition: text-decoration-color 360ms;
 }
 
 .who_interested ul li + li {
   margin-top: 20px;
 }
 
-.who_interested ul li:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: -40px;
-  bottom: -40px;
-  left: -40px;
-  width: 575px;
-  opacity: 0;
-  transition: opacity 360ms;
-  background: url("../img/who_interested_circle.svg") no-repeat center/contain;
-}
-
 .who_interested ul li:hover {
   font-weight: 700;
-}
-
-.who_interested ul li:hover:after {
-  opacity: 1;
-  transition: opacity 360ms;
+  text-decoration-color: #fa6e00;
+  transition: text-decoration-color 360ms;
 }
 
 .why_we {
@@ -1195,7 +1206,7 @@ footer a + a {
 .pressure {
   display: block;
   margin: 10px auto 100px;
-  width: 622px;
+  width: 574px;
   padding-top: 35px;
   padding-bottom: 35px;
   text-align: center;
@@ -1207,21 +1218,29 @@ footer a + a {
   color: #413e6f;
 }
 
-.pressure:before, .pressure:after {
-  content: "";
-  width: 100%;
-  height: 3px;
+.pressure svg:first-child {
   position: absolute;
-  left: 0;
-  background: url("../img/dashed_line.png") no-repeat center/contain;
-}
-
-.pressure:before {
   top: 0;
+  left: 0;
 }
 
-.pressure:after {
+.pressure svg:last-child {
+  position: absolute;
   bottom: 0;
+  left: 0;
+}
+
+@keyframes move {
+  100% {
+    stroke-dashoffset: -19.42;
+  }
+}
+
+.line-move {
+  fill: none;
+  stroke-dasharray: 19.42;
+  stroke-dashoffset: 19.42;
+  animation: move 1s linear infinite;
 }
 
 .our_values {
@@ -1322,28 +1341,16 @@ footer a + a {
   text-align: left;
   color: #ffffff;
   max-width: 345px;
-}
-
-.our_values ul li:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: -40px;
-  bottom: -40px;
-  left: -57px;
-  width: 320px;
-  opacity: 0;
-  transition: opacity 360ms;
-  background: url("../img/values_circle.svg") no-repeat center/contain;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-style: solid;
+  transition: text-decoration-color 360ms;
 }
 
 .our_values ul li:hover {
   font-weight: 700;
-}
-
-.our_values ul li:hover:after {
-  opacity: 1;
-  transition: opacity 360ms;
+  text-decoration-color: #fa6e00;
+  transition: text-decoration-color 360ms;
 }
 
 .our_team p.title {
@@ -1855,17 +1862,8 @@ footer a + a {
   text-align: center;
 }
 
-.how_to_become_student ul li:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -25px;
-  right: -25px;
-  top: -30px;
-  bottom: -30px;
-  opacity: 0;
-  transition: opacity 360ms;
-  background: url("../img/how_to_become_sercle.svg") no-repeat center/contain;
+.how_to_become_student ul li:first-child button {
+  text-decoration: underline;
 }
 
 .how_to_become_student ul li:first-child:before {
@@ -1880,18 +1878,12 @@ footer a + a {
   background: url("../img/how_to_become_arrow.svg") no-repeat center;
 }
 
-.how_to_become_student ul li:nth-child(2):after {
-  top: -35px;
-  bottom: -35px;
-}
-
 .how_to_become_student ul li:hover {
   font-weight: 700;
 }
 
-.how_to_become_student ul li:hover:after {
-  opacity: 1;
-  transition: opacity 360ms;
+.how_to_become_student ul li:hover button {
+  text-decoration: none;
 }
 
 .how_to_become_student ul li + li {
@@ -1928,10 +1920,6 @@ footer a + a {
 .what_u_need .left {
   flex: 1 1 auto;
   padding-right: 70px;
-  background-image: url("../img/dashed_line.png"), url("../img/dashed_line.png");
-  background-repeat: no-repeat;
-  background-position: top left, bottom left;
-  background-size: 464px, 464px;
 }
 
 .what_u_need .right {
@@ -2093,7 +2081,7 @@ footer a + a {
 .contacts {
   background-color: #fa6e00;
   padding-top: 66px;
-  padding-bottom: 128px;
+  padding-bottom: 160px;
 }
 
 .contacts .title {
@@ -2111,18 +2099,18 @@ footer a + a {
   height: 100%;
 }
 
-.contacts .map_wrap .links_wrap {
+.contacts .links_wrap {
   position: absolute;
   bottom: 28px;
-  right: 48px;
+  right: 135px;
 }
 
-.contacts .map_wrap .links_wrap:before, .contacts .map_wrap .links_wrap:after {
+.contacts .links_wrap:before, .contacts .links_wrap:after {
   content: "";
   position: absolute;
 }
 
-.contacts .map_wrap .links_wrap:before {
+.contacts .links_wrap:before {
   width: 410px;
   height: 160px;
   top: -40px;
@@ -2132,27 +2120,27 @@ footer a + a {
   background: url("../img/adress_round.svg") no-repeat center/contain;
 }
 
-.contacts .map_wrap .links_wrap:after {
+.contacts .links_wrap:after {
   width: 101px;
   height: 57px;
   bottom: 25px;
-  right: -150px;
+  right: -115px;
   opacity: 1;
   transition: opacity 360ms;
   background: url("../img/adress_arrow.svg") no-repeat center/contain;
 }
 
-.contacts .map_wrap .links_wrap:hover:before {
+.contacts .links_wrap:hover:before {
   opacity: 1;
   transition: opacity 360ms;
 }
 
-.contacts .map_wrap .links_wrap:hover:after {
+.contacts .links_wrap:hover:after {
   opacity: 0;
   transition: opacity 360ms;
 }
 
-.contacts .map_wrap .links_wrap a {
+.contacts .links_wrap a {
   display: block;
   color: #fff;
   font-family: Plumb;
@@ -2160,14 +2148,13 @@ footer a + a {
   font-weight: bold;
   line-height: 1.78;
   text-align: left;
-  text-shadow: 0px 0px 12px black;
 }
 
-.contacts .map_wrap .links_wrap a + a {
+.contacts .links_wrap a + a {
   margin-top: 5px;
 }
 
-.contacts .map_wrap .links_wrap a:hover {
+.contacts .links_wrap a:hover {
   text-decoration: underline;
 }
 
