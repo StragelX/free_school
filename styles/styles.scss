@@ -4,6 +4,10 @@
 body {
   display: flex;
   flex-direction: column;
+
+  &.no_scroll {
+    overflow: hidden;
+  }
 }
 
 main {
