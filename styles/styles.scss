@@ -317,14 +317,15 @@ footer {
   height: 780px;
 
   .title {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     color: #fff;
-    padding-top: 83px;
+    padding-top: 73px;
+    font-size: 48px;
   }
 
   .container {
     z-index: 2;
-    padding-left: 525px;
+    padding-left: 505px;
   }
 
   &:before {
@@ -379,6 +380,7 @@ footer {
 
   ul {
     max-width: 900px;
+    margin-left: 20px;
 
     &::before {
       content: "";
@@ -411,7 +413,7 @@ footer {
       color: #ffffff;
 
       & + li {
-        margin-top: 15px;
+        margin-top: 20px;
       }
 
       &:after {
@@ -986,7 +988,7 @@ footer {
 
 .school_format {
   height: 780px;
-  padding-top: 95px;
+  padding-top: 85px;
   padding-bottom: 145px;
   background: url("../img/study_format_bg.jpg") no-repeat center / cover;
 
@@ -1103,7 +1105,7 @@ footer {
   .img_1 {
     position: absolute;
     width: 457px;
-    top: 80px;
+    top: 56px;
     z-index: 1;
   }
 
@@ -1112,15 +1114,15 @@ footer {
     z-index: 2;
     width: 92px;
     height: 90px;
-    top: 35px;
-    left: -50px;
+    top: 20px;
+    left: -44px;
   }
 
   .img_2 {
     position: absolute;
     width: 457px;
-    top: 400px;
-    left: 135px;
+    top: 361px;
+    left: 133px;
     z-index: 1;
   }
 
@@ -1131,7 +1133,7 @@ footer {
 
   .right {
     flex: none;
-    width: 512px;
+    width: 463px;
   }
 
   .title {
@@ -1179,7 +1181,7 @@ footer {
       }
 
       & + li {
-        margin-top: 30px;
+        margin-top: 34px;
       }
     }
   }

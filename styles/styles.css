@@ -1016,14 +1016,15 @@ footer a + a {
 }
 
 .who_interested .title {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   color: #fff;
-  padding-top: 83px;
+  padding-top: 73px;
+  font-size: 48px;
 }
 
 .who_interested .container {
   z-index: 2;
-  padding-left: 525px;
+  padding-left: 505px;
 }
 
 .who_interested:before {
@@ -1078,6 +1079,7 @@ footer a + a {
 
 .who_interested ul {
   max-width: 900px;
+  margin-left: 20px;
 }
 
 .who_interested ul::before {
@@ -1109,7 +1111,7 @@ footer a + a {
 }
 
 .who_interested ul li + li {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .who_interested ul li:after {
@@ -1649,7 +1651,7 @@ footer a + a {
 
 .school_format {
   height: 780px;
-  padding-top: 95px;
+  padding-top: 85px;
   padding-bottom: 145px;
   background: url("../img/study_format_bg.jpg") no-repeat center/cover;
 }
@@ -1765,7 +1767,7 @@ footer a + a {
 .wats_in_price .img_1 {
   position: absolute;
   width: 457px;
-  top: 80px;
+  top: 56px;
   z-index: 1;
 }
 
@@ -1774,15 +1776,15 @@ footer a + a {
   z-index: 2;
   width: 92px;
   height: 90px;
-  top: 35px;
-  left: -50px;
+  top: 20px;
+  left: -44px;
 }
 
 .wats_in_price .img_2 {
   position: absolute;
   width: 457px;
-  top: 400px;
-  left: 135px;
+  top: 361px;
+  left: 133px;
   z-index: 1;
 }
 
@@ -1793,7 +1795,7 @@ footer a + a {
 
 .wats_in_price .right {
   flex: none;
-  width: 512px;
+  width: 463px;
 }
 
 .wats_in_price .title {
@@ -1840,7 +1842,7 @@ footer a + a {
 }
 
 .wats_in_price ul li + li {
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 .how_to_become_student {
