@@ -1,6 +1,15 @@
 @import "basic.scss";
 @import "grid";
 
+.df {
+  display: flex;
+  align-items: center;
+
+  &.s_betwen {
+    justify-content: space-between;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -109,10 +118,18 @@ footer {
     text-align: left;
     color: #ffffff;
     margin-bottom: 28px;
+
+    @media all and (max-width: 767px) {
+      font-size: 32px;
+    }
   }
 
   a {
     color: #fff;
+
+    @media all and (max-width: 767px) {
+      font-size: 18px;
+    }
 
     img {
       height: 24px;
@@ -120,6 +137,12 @@ footer {
 
     & + a {
       margin-left: 28px;
+
+      @media all and (max-width: 767px) {
+        display: block;
+        margin-left: 0;
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -129,6 +152,11 @@ footer {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  @media all and (max-width: 1025px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .big_container {
@@ -136,15 +164,6 @@ footer {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.df {
-  display: flex;
-  align-items: center;
-
-  &.s_betwen {
-    justify-content: space-between;
-  }
 }
 
 .title {
@@ -155,6 +174,10 @@ footer {
   line-height: 1.13;
   text-align: left;
   color: #413e6f;
+
+  @media all and (max-width: 767px) {
+    font-size: 32px;
+  }
 }
 
 .top_section {
@@ -162,8 +185,19 @@ footer {
   padding-top: 81px;
   background: url("../img/top_bg.jpg") no-repeat center / contain;
 
+  @media all and (max-width: 1025px) {
+    background: url("../img/top_bg.jpg") no-repeat bottom 60px center/auto 100%;
+  }
+
   .big_logo {
     margin-top: 30px;
+
+    @media all and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      display: block;
+    }
   }
 
   .centered_paper {
@@ -175,6 +209,13 @@ footer {
     height: 330px;
     background: url("../img/top_paper.png") no-repeat center / contain;
 
+    @media all and (max-width: 767px) {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 150px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -183,6 +224,13 @@ footer {
       width: 90px;
       height: 90px;
       background: url("../img/paperclip.svg") no-repeat center / contain;
+
+      @media all and (max-width: 767px) {
+        top: -22px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &:after {
@@ -201,6 +249,13 @@ footer {
       line-height: 1.2;
       text-align: center;
       color: #413e6f;
+
+      @media all and (max-width: 767px) {
+        font-size: 28px;
+        top: 53px;
+        left: 4px;
+        width: 100%;
+      }
     }
   }
 
@@ -221,6 +276,15 @@ footer {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+
+    @media all and (max-width: 767px) {
+      position: relative;
+      top: 20px;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 16px;
+    }
   }
 
   .assigne_btn {
@@ -254,7 +318,7 @@ footer {
 
   .scroll_screen {
     position: absolute;
-    left: 48.5%;
+    left: calc(50% - 20px);
     top: 735px;
     width: 40px;
     height: 40px;
@@ -283,6 +347,10 @@ footer {
   padding-top: 24px;
   padding-bottom: 200px;
 
+  @media all and (max-width: 767px) {
+    padding-bottom: 50px;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -292,6 +360,10 @@ footer {
     width: 300px;
     height: 100px;
     background: url("../img/why_we_cloud.png") no-repeat center / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   h1,
@@ -315,9 +387,21 @@ footer {
   h1 {
     font-size: 48px;
     font-stretch: condensed;
+
+    @media all and (max-width: 767px) {
+      font-size: 36px;
+    }
   }
 
   .stats {
+    @media all and (max-width: 767px) {
+      flex: 1 1 100%;
+
+      & + .stats {
+        margin-top: 50px;
+      }
+    }
+
     .num {
       font-size: 64px;
       letter-spacing: normal;
@@ -338,21 +422,44 @@ footer {
       color: #413e6f;
     }
   }
+
+  .s_betwen {
+    @media all and (max-width: 1025px) {
+      justify-content: space-around;
+    }
+
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .who_interested {
   height: 780px;
+
+  @media all and (max-width: 1025px) {
+    height: auto;
+    padding-bottom: 50px;
+  }
 
   .title {
     margin-bottom: 35px;
     color: #fff;
     padding-top: 73px;
     font-size: 48px;
+
+    @media all and (max-width: 767px) {
+      font-size: 32px;
+    }
   }
 
   .container {
     z-index: 2;
     padding-left: 505px;
+
+    @media all and (max-width: 769px) {
+      padding-left: 15px;
+    }
   }
 
   &:before {
@@ -365,6 +472,10 @@ footer {
     height: 250px;
     z-index: 2;
     background: url("../img/values_cloud.png") no-repeat top right / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -376,6 +487,11 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
+
+    @media all and (max-width: 1025px) {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .img_wrap {
@@ -384,6 +500,14 @@ footer {
     left: 0;
     width: 437px;
     height: 618px;
+
+    @media all and (max-width: 769px) {
+      position: relative;
+      top: 50px;
+      left: auto;
+      width: 100%;
+      height: auto;
+    }
 
     &:after {
       content: "";
@@ -422,6 +546,10 @@ footer {
       transition: opacity 360ms;
       background: url("../img/wats_in_price_img_arrow.svg") no-repeat
         center/contain;
+
+      @media all and (max-width: 1025px) {
+        display: none;
+      }
     }
 
     &:hover {
@@ -443,8 +571,16 @@ footer {
       text-decoration-style: solid;
       transition: text-decoration-color 360ms;
 
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+      }
+
       & + li {
         margin-top: 20px;
+
+        @media all and (max-width: 767px) {
+          margin-top: 15px;
+        }
       }
 
       &:hover {
@@ -460,6 +596,11 @@ footer {
   padding-top: 63px;
   padding-bottom: 100px;
 
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .title {
     margin-bottom: 75px;
   }
@@ -473,6 +614,10 @@ footer {
     width: 300px;
     height: 100px;
     background: url("../img/why_we_cloud.png") no-repeat center / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .why_wrap {
@@ -485,6 +630,17 @@ footer {
       margin-bottom: 65px;
       padding-top: 15px;
 
+      @media all and (max-width: 769px) {
+        flex: 1 1 50%;
+        max-width: 45%;
+        margin-bottom: 30px;
+      }
+
+      @media all and (max-width: 767px) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
       p {
         font-family: Plumb;
         font-size: 24px;
@@ -493,6 +649,10 @@ footer {
         text-align: left;
         color: #413e6f;
         letter-spacing: -0.84px;
+
+        @media all and (max-width: 767px) {
+          font-size: 18px;
+        }
       }
 
       &:before {
@@ -522,7 +682,17 @@ footer {
   line-height: 1.17;
   color: #413e6f;
 
+  @media all and (max-width: 767px) {
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
   svg {
+    @media all and (max-width: 767px) {
+      width: 100%;
+    }
+
     &:first-child {
       position: absolute;
       top: 0;
@@ -553,6 +723,11 @@ footer {
 .our_values {
   height: 731px;
 
+  @media all and (max-width: 1025px) {
+    height: auto;
+    padding-bottom: 85px;
+  }
+
   .title {
     color: #fff;
     margin-bottom: 58px;
@@ -569,6 +744,10 @@ footer {
     height: 250px;
     z-index: 2;
     background: url("../img/values_cloud.png") no-repeat top right / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -580,6 +759,11 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+
+    @media all and (max-width: 1025px) {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .container {
@@ -592,6 +776,18 @@ footer {
     right: 60px;
     width: 380px;
     height: 520px;
+
+    @media all and (max-width: 1025px) {
+      right: 0;
+    }
+
+    @media all and (max-width: 769px) {
+      position: relative;
+      top: 50px;
+      right: auto;
+      width: 100%;
+      height: auto;
+    }
 
     &:after {
       content: "";
@@ -618,6 +814,22 @@ footer {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
+
+    @media all and (max-width: 1025px) {
+      max-width: 640px;
+    }
+
+    @media all and (max-width: 769px) {
+      padding-left: 30px;
+      max-width: 100%;
+    }
+
+    @media all and (max-width: 767px) {
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1;
+      margin-bottom: 50px;
+    }
 
     &::before {
       content: "";
@@ -653,6 +865,10 @@ footer {
       text-decoration-style: solid;
       transition: text-decoration-color 360ms;
 
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+      }
+
       &:hover {
         font-weight: 700;
         text-decoration-color: #fa6e00;
@@ -663,6 +879,10 @@ footer {
 }
 
 .our_team {
+  @media all and (max-width: 1025px) {
+    overflow-x: hidden;
+  }
+
   p.title {
     margin-top: 82px;
     margin-bottom: 82px;
@@ -672,6 +892,15 @@ footer {
   .team_wrap {
     flex-wrap: wrap;
     align-items: stretch;
+
+    @media all and (max-width: 769px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media all and (max-width: 767px) {
+      justify-content: center;
+    }
 
     .one {
       width: 268px;
@@ -690,6 +919,10 @@ footer {
           left: -106px;
           background: url("../img/how_to_become_arrow.svg") no-repeat center /
             contain;
+
+          @media all and (max-width: 1025px) {
+            display: none;
+          }
         }
       }
 
@@ -705,6 +938,10 @@ footer {
           right: -78px;
           background: url("../img/how_to_become_arrow.svg") no-repeat center /
             contain;
+
+          @media all and (max-width: 1025px) {
+            display: none;
+          }
         }
       }
 
@@ -720,6 +957,10 @@ footer {
           left: -46px;
           background: url("../img/how_to_become_arrow.svg") no-repeat center /
             contain;
+
+          @media all and (max-width: 1025px) {
+            display: none;
+          }
         }
       }
 
@@ -806,6 +1047,10 @@ footer {
       flex: 1 1 auto;
       align-self: center;
 
+      @media all and (max-width: 769px) {
+        padding-bottom: 50px;
+      }
+
       .pressure {
         margin-top: 0;
         margin-bottom: 0;
@@ -826,6 +1071,10 @@ footer {
   .study_plan_table_wrap {
     background-color: #fff;
     padding: 30px 25px 37px;
+
+    @media all and (max-width: 767px) {
+      padding: 30px 0;
+    }
 
     .title {
       text-align: center;
@@ -855,6 +1104,14 @@ footer {
       font-stretch: condensed;
       line-height: 1.17;
       color: #413e6f;
+
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+        width: auto;
+
+        &:first-child {
+        }
+      }
     }
 
     th,
@@ -877,6 +1134,10 @@ footer {
             line-height: 1.97;
             text-align: center;
             color: #d25e3c;
+
+            @media all and (max-width: 767px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -908,6 +1169,11 @@ footer {
     line-height: 1.71;
     text-align: center;
     color: #413e6f;
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 
@@ -915,6 +1181,11 @@ footer {
   background-color: #fa6e00;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &:before {
     position: absolute;
@@ -928,6 +1199,10 @@ footer {
     opacity: 1;
     transition: opacity 360ms;
     background: url("../img/video_arrow.svg") no-repeat center / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   &:hover {
@@ -941,12 +1216,23 @@ footer {
     align-items: stretch;
     height: 500px;
 
+    @media all and (max-width: 767px) {
+      height: auto;
+      flex-wrap: wrap;
+    }
+
     .one {
       flex: none;
       width: 50%;
       padding-top: 154px;
       cursor: pointer;
       background-color: #ffffff;
+
+      @media all and (max-width: 767px) {
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
 
       p {
         cursor: pointer;
@@ -983,16 +1269,34 @@ footer {
   padding-bottom: 145px;
   background: url("../img/study_format_bg.jpg") no-repeat center / cover;
 
+  @media all and (max-width: 1025px) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    height: auto;
+  }
+
   .title {
     margin-bottom: 40px;
   }
 
   .inner {
     align-items: stretch;
+
+    @media all and (max-width: 769px) {
+      flex-wrap: wrap;
+    }
   }
 
   .left {
     padding-right: 80px;
+
+    @media all and (max-width: 1025px) {
+      padding-right: 30px;
+    }
+
+    @media all and (max-width: 769px) {
+      padding-right: 0;
+    }
   }
 
   .left,
@@ -1000,10 +1304,23 @@ footer {
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
+
+    @media all and (max-width: 769px) {
+      flex: 1 1 100%;
+    }
   }
 
   .right {
     padding-left: 100px;
+
+    @media all and (max-width: 1025px) {
+      padding-left: 30px;
+    }
+
+    @media all and (max-width: 769px) {
+      padding-left: 0;
+      padding-top: 50px;
+    }
 
     &::before {
       content: "";
@@ -1016,6 +1333,10 @@ footer {
         contain;
       width: 3px;
       height: 400px;
+
+      @media all and (max-width: 769px) {
+        display: none;
+      }
     }
   }
 
@@ -1028,6 +1349,15 @@ footer {
     text-align: left;
     color: #413e6f;
     margin-bottom: 40px;
+
+    @media all and (max-width: 1025px) {
+      line-height: normal;
+    }
+
+    @media all and (max-width: 767px) {
+      font-size: 24px;
+      line-height: normal;
+    }
   }
 
   .price {
@@ -1041,6 +1371,10 @@ footer {
     line-height: 1.4;
     text-align: left;
     color: #fa6e00;
+
+    @media all and (max-width: 767px) {
+      font-size: 20px;
+    }
   }
 
   ul {
@@ -1056,6 +1390,10 @@ footer {
       letter-spacing: normal;
       text-align: left;
       color: #413e6f;
+
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+      }
 
       &:before {
         content: "";
@@ -1073,6 +1411,11 @@ footer {
   padding-top: 65px;
   padding-bottom: 90px;
 
+  @media all and (max-width: 769px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &:after {
     z-index: 3;
     content: "";
@@ -1083,6 +1426,10 @@ footer {
     height: 450px;
     background: url("../img/wats_in_price_cloud.png") no-repeat left bottom /
       contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .img_1 {
@@ -1090,6 +1437,10 @@ footer {
     width: 457px;
     top: 56px;
     z-index: 1;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .img_splash {
@@ -1099,6 +1450,10 @@ footer {
     height: 90px;
     top: 20px;
     left: -44px;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .img_2 {
@@ -1107,16 +1462,32 @@ footer {
     top: 361px;
     left: 133px;
     z-index: 1;
+
+    @media all and (max-width: 1025px) {
+      left: 40px;
+    }
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .left {
     flex: 1 1 auto;
     align-self: baseline;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .right {
     flex: none;
     width: 463px;
+
+    @media all and (max-width: 769px) {
+      width: 100%;
+    }
   }
 
   .title {
@@ -1135,6 +1506,10 @@ footer {
       text-align: left;
       color: #ffffff;
 
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+      }
+
       &.with_arrow {
         &:after {
           content: "";
@@ -1145,6 +1520,10 @@ footer {
           top: 6px;
           background: url("../img/wats_in_price_img_arrow.svg") no-repeat center /
             contain;
+
+          @media all and (max-width: 1025px) {
+            display: none;
+          }
         }
       }
 
@@ -1169,6 +1548,12 @@ footer {
   padding-top: 105px;
   background: url("../img/how_to_become.jpg") no-repeat center / cover;
 
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -1178,6 +1563,10 @@ footer {
     width: 266px;
     height: 155px;
     background: url("../img/how_to_study_cloud.png") no-repeat center / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -1188,11 +1577,19 @@ footer {
     width: 280px;
     height: 280px;
     background: url("../img/how_to_become_splash.png") no-repeat right bottom;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .title {
     text-align: center;
     margin-bottom: 90px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 
   ul {
@@ -1216,6 +1613,10 @@ footer {
           opacity: 1;
           transition: opacity 360ms;
           background: url("../img/how_to_become_arrow.svg") no-repeat center;
+
+          @media all and (max-width: 769px) {
+            display: none;
+          }
         }
 
         &:hover {
@@ -1229,6 +1630,10 @@ footer {
 
       & + li {
         margin-top: 40px;
+
+        @media all and (max-width: 767px) {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -1260,15 +1665,28 @@ footer {
     width: 280px;
     height: 280px;
     background: url("../img/what_u_need_splash.png") no-repeat top right;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .inner {
     align-items: stretch;
+
+    @media all and (max-width: 1025px) {
+      flex-wrap: wrap;
+    }
   }
 
   .left {
     flex: 1 1 auto;
     padding-right: 70px;
+
+    @media all and (max-width: 769px) {
+      padding-right: 0;
+      flex: 1 1 100%;
+    }
   }
 
   .right {
@@ -1276,6 +1694,16 @@ footer {
     align-items: center;
     width: 564px;
     flex: none;
+
+    @media all and (max-width: 769px) {
+      flex: 1 1 100%;
+      width: auto;
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .title {
@@ -1285,6 +1713,14 @@ footer {
     margin-bottom: 40px;
     max-width: 450px;
     margin-top: 15px;
+
+    @media all and (max-width: 767px) {
+      font-size: 32px;
+    }
+
+    @media all and (max-width: 769px) {
+      max-width: 100%;
+    }
   }
 
   ul {
@@ -1299,8 +1735,16 @@ footer {
       text-align: left;
       color: #ffffff;
 
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+      }
+
       & + li {
         margin-top: 30px;
+
+        @media all and (max-width: 767px) {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -1319,6 +1763,10 @@ footer {
     width: 530px;
     height: 200px;
     background: url("../img/news_cloude.png") no-repeat right bottom / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .title {
@@ -1334,6 +1782,15 @@ footer {
     flex: 1 1 50%;
     max-width: 569px;
     padding-bottom: 30px;
+
+    @media all and (max-width: 1025px) {
+      max-width: 48%;
+    }
+
+    @media all and (max-width: 767px) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
 
     &:first-child {
       &::after {
@@ -1410,6 +1867,10 @@ footer {
     height: 225px;
     z-index: 2;
     background: url("../img/space_cloud.png") no-repeat top right / contain;
+
+    @media all and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .title {
@@ -1528,9 +1989,21 @@ footer {
     flex-wrap: wrap;
     align-items: center;
 
+    @media all and (max-width: 1025px) {
+      justify-content: space-between;
+    }
+
     img {
       margin-bottom: 50px;
       margin-right: 48px;
+
+      @media all and (max-width: 1025px) {
+        margin-right: 15px;
+      }
+
+      @media all and (max-width: 767px) {
+        max-width: 45%;
+      }
     }
   }
 }
@@ -1560,6 +2033,11 @@ footer {
     width: 25px;
     height: 28px;
     background: url("../img/close_icon_color.svg") no-repeat center / contain;
+
+    @media all and (max-width: 769px) {
+      top: 30px;
+      right: 30px;
+    }
   }
 }
 
@@ -1611,12 +2089,21 @@ footer {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+      font-size: 32px;
+    }
   }
 }
 
 .form_overlay {
   background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
   padding-top: 50px;
+
+  @media all and (max-width: 767px) {
+    background: #fff;
+  }
 
   .form_wrap {
     .title {
@@ -1628,6 +2115,10 @@ footer {
       text-align: center;
       color: #413e6f;
       margin-bottom: 40px;
+
+      @media all and (max-width: 767px) {
+        font-size: 32px;
+      }
     }
 
     input {
@@ -1641,6 +2132,11 @@ footer {
       color: #413e6f;
       border-bottom: 1px solid #413e6f;
       width: 100%;
+
+      @media all and (max-width: 767px) {
+        height: 32px;
+        line-height: 32px;
+      }
 
       &.invalide {
         color: #fa6e00;
@@ -1668,6 +2164,10 @@ footer {
       letter-spacing: 1.6px;
       text-align: center;
       color: #ffffff;
+
+      @media all and (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     .error_note {
@@ -1695,4 +2195,8 @@ footer {
 
 .license_overlay {
   background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
+
+  @media all and (max-width: 767px) {
+    background: #fff;
+  }
 }
