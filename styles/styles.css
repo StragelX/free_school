@@ -2691,6 +2691,13 @@ footer a + a {
   padding-bottom: 150px;
 }
 
+@media all and (max-width: 767px) {
+  .photo_space {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 .photo_space:after {
   content: "";
   position: absolute;
@@ -2716,6 +2723,12 @@ footer a + a {
 .photo_space .swiper-slide {
   height: 610px;
   overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  .photo_space .swiper-slide {
+    height: 200px;
+  }
 }
 
 .photo_space .swiper-slide img {
@@ -2752,6 +2765,13 @@ footer a + a {
   position: absolute;
   bottom: 28px;
   right: 135px;
+}
+
+@media all and (max-width: 767px) {
+  .contacts .links_wrap {
+    right: auto;
+    left: 15px;
+  }
 }
 
 .contacts .links_wrap:before, .contacts .links_wrap:after {

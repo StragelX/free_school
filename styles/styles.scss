@@ -1858,6 +1858,11 @@ footer {
   padding-top: 76px;
   padding-bottom: 150px;
 
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -1881,6 +1886,10 @@ footer {
   .swiper-slide {
     height: 610px;
     overflow: hidden;
+
+    @media all and (max-width: 767px) {
+      height: 200px;
+    }
 
     img {
       width: 100%;
@@ -1917,6 +1926,11 @@ footer {
     position: absolute;
     bottom: 28px;
     right: 135px;
+
+    @media all and (max-width: 767px) {
+      right: auto;
+      left: 15px;
+    }
 
     &:before,
     &:after {
