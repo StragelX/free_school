@@ -953,8 +953,8 @@ footer a + a {
 }
 
 .online_school {
-  padding-top: 128px;
-  padding-bottom: 100px;
+  padding-top: 24px;
+  padding-bottom: 200px;
 }
 
 .online_school:after {
@@ -982,8 +982,8 @@ footer a + a {
 }
 
 .online_school .subtitle {
-  margin-top: 24px;
-  margin-bottom: 100px;
+  margin-top: 15px;
+  margin-bottom: 78px;
 }
 
 .online_school h1 {
@@ -1005,7 +1005,7 @@ footer a + a {
   font-weight: bold;
   font-stretch: condensed;
   font-style: normal;
-  line-height: 2.11;
+  line-height: 1.31;
   letter-spacing: 0.36px;
   text-align: center;
   color: #413e6f;
@@ -1061,10 +1061,10 @@ footer a + a {
   content: "";
   position: absolute;
   z-index: 2;
-  width: 150px;
-  height: 150px;
-  left: -65px;
-  top: -65px;
+  width: 200px;
+  height: 200px;
+  left: -103px;
+  top: -89px;
   background: url("../img/3_lines.svg") no-repeat center/contain;
 }
 
@@ -1258,7 +1258,7 @@ footer a + a {
 .our_values .img_wrap {
   position: absolute;
   top: 100px;
-  right: 0;
+  right: 60px;
   width: 380px;
   height: 520px;
 }
@@ -1267,10 +1267,10 @@ footer a + a {
   content: "";
   position: absolute;
   z-index: 2;
-  width: 150px;
-  height: 150px;
-  left: -65px;
-  top: -65px;
+  width: 200px;
+  height: 200px;
+  left: -70px;
+  top: -70px;
   background: url("../img/3_lines.svg") no-repeat center/contain;
 }
 
