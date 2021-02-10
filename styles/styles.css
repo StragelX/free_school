@@ -2055,6 +2055,7 @@ footer a + a {
 .news .img_wrap {
   overflow: hidden;
   height: 400px;
+  background-color: #c4c4c4;
 }
 
 .news .img_wrap img {
@@ -2110,6 +2111,7 @@ footer a + a {
 
 .photo_space .title {
   margin-bottom: 46px;
+  color: #fff;
 }
 
 .photo_space .swiper-slide {
@@ -2273,5 +2275,97 @@ footer a + a {
   letter-spacing: normal;
   text-align: center;
   color: #413e6f;
+}
+
+.form_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding-top: 100px;
+  opacity: 1;
+  transition: opacity 360ms;
+  overflow-x: auto;
+}
+
+.form_overlay.hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 360ms;
+}
+
+.form_overlay .close {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 25px;
+  height: 28px;
+  background: url("../img/close_icon_color.svg") no-repeat center/contain;
+}
+
+.form_overlay .form_wrap .title {
+  font-family: Plumb;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: condensed;
+  line-height: 1.13;
+  text-align: center;
+  color: #413e6f;
+  margin-bottom: 40px;
+}
+
+.form_overlay .form_wrap input {
+  height: 64px;
+  line-height: 64px;
+  background: transparent;
+  font-family: Plumb;
+  font-size: 18px;
+  line-height: 1.78;
+  text-align: left;
+  color: #413e6f;
+  border-bottom: 1px solid #413e6f;
+  width: 100%;
+}
+
+.form_overlay .form_wrap input:invalid {
+  color: #fa6e00;
+  border-bottom: 1px solid #fa6e00;
+}
+
+.form_overlay .form_wrap input + input {
+  margin-top: 40px;
+}
+
+.form_overlay .form_wrap input[type="submit"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  width: 456px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: #d25e3c;
+  font-family: Plumb;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.form_overlay .form_wrap .alert {
+  margin-top: 36px;
+  margin-bottom: 52px;
+  text-align: center;
+  font-family: Plumb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.29;
+  text-align: center;
+  color: #fa6e00;
 }
 /*# sourceMappingURL=styles.css.map */
