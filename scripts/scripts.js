@@ -9,13 +9,14 @@
       $("body").removeClass('no_scroll');
     })
 
-    $('.video_wrap .inner .one').click(function(){
-      $(".modal_overlay").removeClass("hidden");
+    $('.call_modal').click(function(){
+      let modal = $(this).attr('data-modal');
+      $(modal).removeClass("hidden");
       $("body").addClass('no_scroll');
     })
 
-    $('.assigne_btn').click(function(){
-      $(".form_overlay").removeClass("hidden");
+    $('.video_wrap .inner .one').click(function(){
+      $(".modal_overlay").removeClass("hidden");
       $("body").addClass('no_scroll');
     })
 
