@@ -1349,14 +1349,7 @@ footer a + a {
 .our_team p.title {
   margin-top: 82px;
   margin-bottom: 82px;
-  font-family: Plumb;
-  font-size: 64px;
-  font-weight: bold;
-  font-stretch: condensed;
-  font-style: normal;
-  line-height: 1.13;
   text-align: center;
-  color: #413e6f;
 }
 
 .our_team .team_wrap {
@@ -1506,14 +1499,7 @@ footer a + a {
 }
 
 .study_plan .study_plan_table_wrap .title {
-  font-size: 48px;
-  font-stretch: condensed;
-  line-height: 1.17;
-  font-family: Plumb;
-  font-size: 48px;
-  font-weight: bold;
   text-align: center;
-  color: #413e6f;
   margin-bottom: 10px;
 }
 
@@ -1630,13 +1616,7 @@ footer a + a {
 }
 
 .video_wrap .inner .one .title {
-  font-family: Plumb;
-  font-size: 64px;
-  font-weight: bold;
-  font-stretch: condensed;
-  line-height: 1.13;
   text-align: center;
-  color: #413e6f;
   margin-bottom: 42px;
 }
 
@@ -1661,14 +1641,6 @@ footer a + a {
 }
 
 .school_format .title {
-  font-family: Plumb;
-  font-size: 64px;
-  font-weight: bold;
-  font-stretch: condensed;
-  font-style: normal;
-  line-height: 1.13;
-  letter-spacing: normal;
-  color: #413e6f;
   margin-bottom: 40px;
 }
 
@@ -1803,12 +1775,6 @@ footer a + a {
 }
 
 .wats_in_price .title {
-  font-family: Plumb;
-  font-size: 64px;
-  font-weight: bold;
-  font-stretch: condensed;
-  line-height: 1.13;
-  text-align: left;
   color: #ffffff;
   margin-bottom: 30px;
 }
@@ -1831,7 +1797,7 @@ footer a + a {
   width: 101px;
   height: 57px;
   position: absolute;
-  right: -25px;
+  right: -75px;
   top: 6px;
   background: url("../img/wats_in_price_img_arrow.svg") no-repeat center/contain;
 }
@@ -1877,13 +1843,7 @@ footer a + a {
 }
 
 .how_to_become_student .title {
-  font-family: Plumb;
-  font-size: 64px;
-  font-weight: bold;
-  font-stretch: condensed;
-  line-height: 1.13;
   text-align: center;
-  color: #413e6f;
   margin-bottom: 90px;
 }
 
@@ -1982,12 +1942,8 @@ footer a + a {
 }
 
 .what_u_need .title {
-  font-family: Plumb;
   font-size: 36px;
-  font-weight: bold;
-  font-stretch: condensed;
   line-height: 1.5;
-  text-align: left;
   color: #ffffff;
   margin-bottom: 40px;
   max-width: 450px;
