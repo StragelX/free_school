@@ -1290,6 +1290,14 @@
         </div>
     </div>
 
+    <div class="thanks_overlay hidden">
+        <button class="close"></button>
+
+        <p class="thanks">
+            Дякуємо за зголошення!  Зовсім скоро сконтактуємо!
+        </p>
+    </div>
+
     <div class="form_overlay hidden">
         <button class="close"></button>
 
@@ -1298,7 +1306,7 @@
 
             <input type="text" placeholder="Прізвище та ім’я когось з батьків">
 
-            <input type="text" placeholder="Прізвище та ім’я дитини">
+            <input type="text" placeholder="Прізвище та ім’я дитини" :invalid>
 
             <input type="text" placeholder="Клас / Вік">
 

@@ -9,10 +9,20 @@
         $("body").removeClass('no_scroll');
     })
 
-    $('.form_overlay .close').click(function(){
-      $(this).closest(".form_overlay").addClass("hidden");
+    $('.thanks_overlay .close').click(function(){
+      $(this).closest(".thanks_overlay").addClass("hidden");
       $("body").removeClass('no_scroll');
   })
+
+    $('.form_overlay .close, .form_overlay .form_wrap input[type="submit"]').click(function(){
+      $(this).closest(".form_overlay").addClass("hidden");
+      $("body").removeClass('no_scroll');
+    })
+
+    $('.form_overlay .form_wrap input[type="submit"]').click(function(){
+      $(".thanks_overlay").removeClass("hidden");
+      $("body").addClass('no_scroll');
+    })
 
     $('.video_wrap .inner .one').click(function(){
         $(".modal_overlay").removeClass("hidden");

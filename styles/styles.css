@@ -2239,6 +2239,51 @@ footer a + a {
   color: #413e6f;
 }
 
+.thanks_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: url("../img/modal_thanks_bg.jpg") no-repeat center/cover;
+  padding-top: 100px;
+  opacity: 1;
+  transition: opacity 360ms;
+}
+
+.thanks_overlay.hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 360ms;
+}
+
+.thanks_overlay .close {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 25px;
+  height: 28px;
+  background: url("../img/close_icon_color.svg") no-repeat center/contain;
+}
+
+.thanks_overlay .thanks {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Plumb;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
 .form_overlay {
   position: fixed;
   top: 0;
