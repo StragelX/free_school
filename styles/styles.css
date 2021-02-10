@@ -2087,7 +2087,7 @@ footer a + a {
   line-height: 1.2;
   text-align: left;
   color: #413e6f;
-  max-height: 30px;
+  max-height: 29px;
   overflow: hidden;
   transition: max-height 360ms;
 }
