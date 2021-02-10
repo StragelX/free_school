@@ -1878,11 +1878,11 @@ footer a + a {
   background: url("../img/how_to_become_arrow.svg") no-repeat center;
 }
 
-.how_to_become_student ul li:hover {
+.how_to_become_student ul li:first-child:hover {
   font-weight: 700;
 }
 
-.how_to_become_student ul li:hover button {
+.how_to_become_student ul li:first-child:hover button {
   text-decoration: none;
 }
 
@@ -2178,31 +2178,40 @@ footer a + a {
   margin-right: 48px;
 }
 
-.modal_overlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
-  background-color: #fa6e00;
-  padding-top: 100px;
+  overflow-x: auto;
+  z-index: 100;
   opacity: 1;
   transition: opacity 360ms;
 }
 
-.modal_overlay.hidden {
+.modal.hidden {
   pointer-events: none;
   opacity: 0;
   transition: opacity 360ms;
 }
 
-.modal_overlay .close {
+.modal .close {
   position: absolute;
   top: 60px;
   right: 60px;
   width: 25px;
   height: 28px;
+  background: url("../img/close_icon_color.svg") no-repeat center/contain;
+}
+
+.modal_overlay {
+  background-color: #fa6e00;
+  padding-top: 100px;
+}
+
+.modal_overlay .close {
   background: url("../img/close_icon.svg") no-repeat center/contain;
 }
 
@@ -2227,31 +2236,8 @@ footer a + a {
 }
 
 .thanks_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
   background: url("../img/modal_thanks_bg.jpg") no-repeat center/cover;
   padding-top: 100px;
-  opacity: 1;
-  transition: opacity 360ms;
-}
-
-.thanks_overlay.hidden {
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 360ms;
-}
-
-.thanks_overlay .close {
-  position: absolute;
-  top: 60px;
-  right: 60px;
-  width: 25px;
-  height: 28px;
-  background: url("../img/close_icon_color.svg") no-repeat center/contain;
 }
 
 .thanks_overlay .thanks {
@@ -2272,32 +2258,8 @@ footer a + a {
 }
 
 .form_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  background-color: #fff;
-  padding-top: 100px;
-  opacity: 1;
-  transition: opacity 360ms;
-  overflow-x: auto;
-}
-
-.form_overlay.hidden {
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 360ms;
-}
-
-.form_overlay .close {
-  position: absolute;
-  top: 60px;
-  right: 60px;
-  width: 25px;
-  height: 28px;
-  background: url("../img/close_icon_color.svg") no-repeat center/contain;
+  background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
+  padding-top: 50px;
 }
 
 .form_overlay .form_wrap .title {
@@ -2324,20 +2286,20 @@ footer a + a {
   width: 100%;
 }
 
-.form_overlay .form_wrap input:invalid {
+.form_overlay .form_wrap input.invalide {
   color: #fa6e00;
   border-bottom: 1px solid #fa6e00;
 }
 
 .form_overlay .form_wrap input + input {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.form_overlay .form_wrap input[type="submit"] {
+.form_overlay .form_wrap .send_form {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   width: 456px;
   height: 64px;
   border-radius: 8px;
@@ -2351,7 +2313,7 @@ footer a + a {
   color: #ffffff;
 }
 
-.form_overlay .form_wrap .alert {
+.form_overlay .form_wrap .error_note {
   margin-top: 36px;
   margin-bottom: 52px;
   text-align: center;
@@ -2361,5 +2323,18 @@ footer a + a {
   line-height: 2.29;
   text-align: center;
   color: #fa6e00;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 180ms;
+}
+
+.form_overlay .form_wrap .error_note.hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms;
+}
+
+.license_overlay {
+  background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
 }
 /*# sourceMappingURL=styles.css.map */

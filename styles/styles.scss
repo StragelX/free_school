@@ -1217,13 +1217,13 @@ footer {
           transition: opacity 360ms;
           background: url("../img/how_to_become_arrow.svg") no-repeat center;
         }
-      }
 
-      &:hover {
-        font-weight: 700;
+        &:hover {
+          font-weight: 700;
 
-        button {
-          text-decoration: none;
+          button {
+            text-decoration: none;
+          }
         }
       }
 
@@ -1535,15 +1535,15 @@ footer {
   }
 }
 
-.modal_overlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
-  background-color: #fa6e00;
-  padding-top: 100px;
+  overflow-x: auto;
+  z-index: 100;
   opacity: 1;
   transition: opacity 360ms;
 
@@ -1559,6 +1559,15 @@ footer {
     right: 60px;
     width: 25px;
     height: 28px;
+    background: url("../img/close_icon_color.svg") no-repeat center / contain;
+  }
+}
+
+.modal_overlay {
+  background-color: #fa6e00;
+  padding-top: 100px;
+
+  .close {
     background: url("../img/close_icon.svg") no-repeat center / contain;
   }
 
@@ -1584,31 +1593,8 @@ footer {
 }
 
 .thanks_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
   background: url("../img/modal_thanks_bg.jpg") no-repeat center / cover;
   padding-top: 100px;
-  opacity: 1;
-  transition: opacity 360ms;
-
-  &.hidden {
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 360ms;
-  }
-
-  .close {
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    width: 25px;
-    height: 28px;
-    background: url("../img/close_icon_color.svg") no-repeat center / contain;
-  }
 
   .thanks {
     width: 500px;
@@ -1629,32 +1615,8 @@ footer {
 }
 
 .form_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  background-color: #fff;
-  padding-top: 100px;
-  opacity: 1;
-  transition: opacity 360ms;
-  overflow-x: auto;
-
-  &.hidden {
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 360ms;
-  }
-
-  .close {
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    width: 25px;
-    height: 28px;
-    background: url("../img/close_icon_color.svg") no-repeat center / contain;
-  }
+  background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
+  padding-top: 50px;
 
   .form_wrap {
     .title {
@@ -1680,35 +1642,35 @@ footer {
       border-bottom: 1px solid #413e6f;
       width: 100%;
 
-      &:invalid {
+      &.invalide {
         color: #fa6e00;
         border-bottom: 1px solid #fa6e00;
       }
 
       & + input {
-        margin-top: 40px;
-      }
-
-      &[type="submit"] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 100px;
-        width: 456px;
-        height: 64px;
-        border-radius: 8px;
-        background-color: #d25e3c;
-        font-family: Plumb;
-        font-size: 20px;
-        font-weight: bold;
-        font-stretch: condensed;
-        letter-spacing: 1.6px;
-        text-align: center;
-        color: #ffffff;
+        margin-top: 30px;
       }
     }
 
-    .alert {
+    .send_form {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      width: 456px;
+      height: 64px;
+      border-radius: 8px;
+      background-color: #d25e3c;
+      font-family: Plumb;
+      font-size: 20px;
+      font-weight: bold;
+      font-stretch: condensed;
+      letter-spacing: 1.6px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .error_note {
       margin-top: 36px;
       margin-bottom: 52px;
       text-align: center;
@@ -1718,6 +1680,19 @@ footer {
       line-height: 2.29;
       text-align: center;
       color: #fa6e00;
+      pointer-events: all;
+      opacity: 0;
+      transition: opacity 180ms;
+
+      &.hidden {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 180ms;
+      }
     }
   }
+}
+
+.license_overlay {
+  background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
 }
