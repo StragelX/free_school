@@ -737,6 +737,12 @@ header {
   left: 0;
 }
 
+@media all and (max-width: 1025px) {
+  header {
+    display: none !important;
+  }
+}
+
 header .logo {
   height: 62px;
 }
@@ -902,6 +908,12 @@ footer a + a {
   }
 }
 
+@media all and (max-width: 767px) {
+  .top_section {
+    padding-top: 10px;
+  }
+}
+
 .top_section .big_logo {
   margin-top: 30px;
 }
@@ -1046,7 +1058,7 @@ footer a + a {
   width: 40px;
   height: 40px;
   animation: 2s bounce infinite;
-  background: url("../img/mouse_icon.png") no-repeat center/contain;
+  background: url("../img/mouse_icon.svg") no-repeat center/contain;
 }
 
 @keyframes bounce {
@@ -1886,6 +1898,9 @@ footer a + a {
     font-size: 18px;
     width: auto;
   }
+  .study_plan table th:first-child {
+    width: 95px;
+  }
 }
 
 .study_plan table th,
@@ -1939,6 +1954,8 @@ footer a + a {
   .study_plan .anotation {
     width: 100%;
     margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -2046,6 +2063,7 @@ footer a + a {
     padding-top: 75px;
     padding-bottom: 75px;
     height: auto;
+    background: #fff;
   }
 }
 

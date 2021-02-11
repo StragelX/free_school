@@ -34,6 +34,10 @@ header {
   top: 0;
   left: 0;
 
+  @media all and (max-width: 1025px) {
+    display: none !important;
+  }
+
   .logo {
     height: 62px;
   }
@@ -189,6 +193,10 @@ footer {
     background: url("../img/top_bg.jpg") no-repeat bottom 60px center/auto 100%;
   }
 
+  @media all and (max-width: 767px) {
+    padding-top: 10px;
+  }
+
   .big_logo {
     margin-top: 30px;
 
@@ -323,7 +331,7 @@ footer {
     width: 40px;
     height: 40px;
     animation: 2s bounce infinite;
-    background: url("../img/mouse_icon.png") no-repeat center / contain;
+    background: url("../img/mouse_icon.svg") no-repeat center / contain;
   }
 }
 
@@ -1110,6 +1118,7 @@ footer {
         width: auto;
 
         &:first-child {
+          width: 95px;
         }
       }
     }
@@ -1173,6 +1182,8 @@ footer {
     @media all and (max-width: 767px) {
       width: 100%;
       margin-left: 0;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
@@ -1273,6 +1284,7 @@ footer {
     padding-top: 75px;
     padding-bottom: 75px;
     height: auto;
+    background: #fff;
   }
 
   .title {
