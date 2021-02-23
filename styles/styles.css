@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Plumb;
   src: url("../fonts/Plumb-Bold/Plumb-Bold.eot");
@@ -897,14 +896,20 @@ footer a + a {
 }
 
 .top_section {
-  height: 970px;
+  height: 960px;
   padding-top: 81px;
-  background: url("../img/top_bg.jpg") no-repeat center/contain;
+  background: url("../img/top_bg_1.jpg") no-repeat center/contain;
+}
+
+@media all and (max-width: 1441px) {
+  .top_section {
+    height: 950px;
+  }
 }
 
 @media all and (max-width: 1025px) {
   .top_section {
-    background: url("../img/top_bg.jpg") no-repeat bottom 60px center/auto 100%;
+    background: url("../img/top_bg_1.jpg") no-repeat bottom 60px center/auto 100%;
   }
 }
 
@@ -927,112 +932,36 @@ footer a + a {
   }
 }
 
-.top_section .centered_paper {
+.top_section .top_slogan {
   position: absolute;
-  top: 145px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 750px;
-  height: 330px;
-  background: url("../img/top_paper.png") no-repeat center/contain;
+  width: 571px;
+  height: 343px;
+  right: 85px;
+  top: 112px;
 }
 
-@media all and (max-width: 767px) {
-  .top_section .centered_paper {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 150px;
-  }
-}
-
-.top_section .centered_paper::before {
-  content: "";
+.top_section .under_slogan {
   position: absolute;
-  top: -24px;
-  right: 94px;
-  width: 90px;
-  height: 90px;
-  background: url("../img/paperclip.svg") no-repeat center/contain;
-}
-
-@media all and (max-width: 767px) {
-  .top_section .centered_paper::before {
-    top: -22px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.top_section .centered_paper:after {
-  content: "Вчимо творити майбутнє!";
-  position: absolute;
-  top: 126px;
-  left: 123px;
-  width: 526px;
-  height: 72px;
-  transform: rotate(-10deg);
+  top: 505px;
+  left: 515px;
+  max-width: 430px;
   font-family: Plumb;
-  font-size: 60px;
-  font-weight: bold;
-  font-stretch: condensed;
   font-style: normal;
-  line-height: 1.2;
-  text-align: center;
-  color: #413e6f;
-}
-
-@media all and (max-width: 767px) {
-  .top_section .centered_paper:after {
-    font-size: 28px;
-    top: 53px;
-    left: 4px;
-    width: 100%;
-  }
-}
-
-.top_section .under_paper {
-  position: absolute;
-  top: 400px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 706px;
-  padding: 11px 48px 18px;
-  background-color: #413e6f;
-  font-family: Plumb;
+  font-weight: bold;
   font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.78;
-  letter-spacing: normal;
-  text-align: center;
+  line-height: 32px;
   color: #ffffff;
-}
-
-@media all and (max-width: 767px) {
-  .top_section .under_paper {
-    position: relative;
-    top: 20px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 16px;
-  }
 }
 
 .top_section .assigne_btn {
   position: absolute;
-  top: 590px;
-  left: 50%;
+  top: 600px;
+  left: 85%;
   transform: translateX(-50%);
   width: 220px;
-  height: 64px;
+  height: 58px;
   border-radius: 8px;
-  background-color: #d25e3c;
-  width: 220px;
-  height: 64px;
+  background-color: #413e6f;
   font-family: Plumb;
   font-size: 20px;
   font-weight: bold;
@@ -1059,6 +988,12 @@ footer a + a {
   height: 40px;
   animation: 2s bounce infinite;
   background: url("../img/mouse_icon.svg") no-repeat center/contain;
+}
+
+@media all and (max-width: 1441px) {
+  .top_section .scroll_screen {
+    top: 720px;
+  }
 }
 
 @keyframes bounce {
@@ -1860,6 +1795,8 @@ footer a + a {
 @media all and (max-width: 767px) {
   .study_plan .study_plan_table_wrap {
     padding: 30px 0;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 
@@ -1884,7 +1821,6 @@ footer a + a {
 }
 
 .study_plan table th {
-  width: 20%;
   font-family: Plumb;
   font-size: 34.2px;
   font-weight: bold;
@@ -1927,10 +1863,6 @@ footer a + a {
   }
 }
 
-.study_plan table .empty td {
-  height: 31px;
-}
-
 .study_plan table .summary td {
   font-family: Plumb;
   font-size: 12.8px;
@@ -1940,7 +1872,7 @@ footer a + a {
 
 .study_plan .anotation {
   margin-left: 20%;
-  width: 40%;
+  width: 42%;
   margin-top: 30px;
   font-family: Plumb;
   font-size: 14px;
