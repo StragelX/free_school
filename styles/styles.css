@@ -1337,6 +1337,10 @@ footer a + a {
   transition: text-decoration-color 360ms;
 }
 
+.who_interested ul li.no_hover {
+  pointer-events: none;
+}
+
 @media all and (max-width: 767px) {
   .who_interested ul li {
     font-size: 18px;
@@ -1956,7 +1960,7 @@ footer a + a {
 }
 
 .study_plan .anotation {
-  margin-left: 20%;
+  margin-left: 29%;
   width: 42%;
   margin-top: 30px;
   font-family: Plumb;
@@ -1967,7 +1971,7 @@ footer a + a {
   color: #413e6f;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 769px) {
   .study_plan .anotation {
     width: 100%;
     margin-left: 0;
@@ -2119,6 +2123,7 @@ footer a + a {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 @media all and (max-width: 769px) {
@@ -2189,9 +2194,9 @@ footer a + a {
 
 .school_format .price {
   display: flex;
-  align-items: flex-end;
   padding-top: 40px;
-  flex: 1 1 auto;
+  flex: none;
+  height: 140px;
   font-family: Plumb;
   font-size: 24px;
   font-weight: bold;

@@ -578,6 +578,10 @@ footer {
       text-decoration-style: solid;
       transition: text-decoration-color 360ms;
 
+      &.no_hover {
+        pointer-events: none;
+      }
+
       @media all and (max-width: 767px) {
         font-size: 18px;
       }
@@ -1168,7 +1172,7 @@ footer {
   }
 
   .anotation {
-    margin-left: 20%;
+    margin-left: 29%;
     width: 42%;
     margin-top: 30px;
     font-family: Plumb;
@@ -1178,7 +1182,7 @@ footer {
     text-align: center;
     color: #413e6f;
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 769px) {
       width: 100%;
       margin-left: 0;
       padding-left: 15px;
@@ -1315,6 +1319,7 @@ footer {
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     @media all and (max-width: 769px) {
       flex: 1 1 100%;
@@ -1373,9 +1378,9 @@ footer {
 
   .price {
     display: flex;
-    align-items: flex-end;
     padding-top: 40px;
-    flex: 1 1 auto;
+    flex: none;
+    height: 140px;
     font-family: Plumb;
     font-size: 24px;
     font-weight: bold;
