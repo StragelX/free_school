@@ -77,4 +77,15 @@
         $('.error_note').show();
       }
     });
+
+    
+$(window).scroll(function(event) {
+  if($(this).scrollTop() > 800) {
+   $(".logo").addClass('visible');
+   return false;
+   }
+  else {
+   $(".logo").removeClass('visible');
+   }
+  });
 });

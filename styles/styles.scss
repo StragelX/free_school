@@ -40,6 +40,13 @@ header {
 
   .logo {
     height: 62px;
+    opacity: 0;
+    transition: opacity 360ms;
+
+    &.visible {
+      opacity: 1;
+      transition: opacity 360ms;
+    }
   }
 
   nav {
@@ -110,6 +117,11 @@ footer {
   height: 190px;
   background: #413e6f;
   padding-top: 42px;
+
+  @media all and (max-width: 767px) {
+    height: auto;
+    padding-bottom: 30px;
+  }
 
   .text {
     font-family: Plumb;
@@ -824,6 +836,8 @@ footer {
       -webkit-columns: 1;
       -moz-columns: 1;
       margin-bottom: 50px;
+      padding-left: 0;
+      margin-left: 20px;
     }
 
     &::before {
@@ -1069,8 +1083,6 @@ footer {
 
     @media all and (max-width: 767px) {
       padding: 30px 0;
-      margin-left: -15px;
-      margin-right: -15px;
     }
 
     .title {
@@ -1102,11 +1114,11 @@ footer {
       color: #413e6f;
 
       @media all and (max-width: 767px) {
-        font-size: 18px;
+        font-size: 12px;
         width: auto;
 
         &:first-child {
-          width: 95px;
+          width: 100px;
         }
       }
     }
@@ -1118,11 +1130,15 @@ footer {
       padding-bottom: 3px;
       border: solid 1px #413e6f4c;
       cursor: default;
+
+      @media all and (max-width: 767px) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
 
     tbody {
       tr {
-        :not(.empty),
         &:not(.summary) {
           td {
             font-family: Plumb;
@@ -1131,9 +1147,10 @@ footer {
             line-height: 1.97;
             text-align: center;
             color: #d25e3c;
+            text-transform: capitalize;
 
             @media all and (max-width: 767px) {
-              font-size: 14px;
+              font-size: 10px;
             }
           }
         }
