@@ -916,11 +916,21 @@ footer a + a {
 @media all and (max-width: 767px) {
   .top_section {
     padding-top: 10px;
+    height: 900px;
+    background: #fa6e00;
   }
 }
 
 .top_section .big_logo {
   margin-top: 30px;
+}
+
+@media all and (max-width: 769px) {
+  .top_section .big_logo {
+    position: absolute;
+    right: 50px;
+    top: -70px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -929,6 +939,9 @@ footer a + a {
     margin-right: auto;
     margin-bottom: 50px;
     display: block;
+    position: relative;
+    top: auto;
+    right: auto;
   }
 }
 
@@ -938,6 +951,22 @@ footer a + a {
   height: 343px;
   right: 85px;
   top: 112px;
+}
+
+@media all and (max-width: 769px) {
+  .top_section .top_slogan {
+    right: 150px;
+    top: 60px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .top_section .top_slogan {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: -65px;
+  }
 }
 
 .top_section .under_slogan {
@@ -951,6 +980,21 @@ footer a + a {
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
+}
+
+@media all and (max-width: 769px) {
+  .top_section .under_slogan {
+    left: 160px;
+    top: 450px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .top_section .under_slogan {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
 }
 
 .top_section .assigne_btn {
@@ -980,6 +1024,18 @@ footer a + a {
   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
 }
 
+@media all and (max-width: 769px) {
+  .top_section .assigne_btn {
+    left: 50%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .top_section .assigne_btn {
+    top: 700px;
+  }
+}
+
 .top_section .scroll_screen {
   position: absolute;
   left: calc(50% - 20px);
@@ -993,6 +1049,12 @@ footer a + a {
 @media all and (max-width: 1441px) {
   .top_section .scroll_screen {
     top: 720px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .top_section .scroll_screen {
+    display: none;
   }
 }
 
@@ -2727,6 +2789,12 @@ footer a + a {
 .contacts .links_wrap:before, .contacts .links_wrap:after {
   content: "";
   position: absolute;
+}
+
+@media all and (max-width: 767px) {
+  .contacts .links_wrap:before, .contacts .links_wrap:after {
+    display: none;
+  }
 }
 
 .contacts .links_wrap:before {
