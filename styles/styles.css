@@ -1908,6 +1908,10 @@ footer a + a {
   color: #413e6f;
 }
 
+.study_plan table th:first-child {
+  width: 200px;
+}
+
 @media all and (max-width: 767px) {
   .study_plan table th {
     font-size: 12px;
@@ -2541,7 +2545,7 @@ footer a + a {
 
 .what_u_need .left {
   flex: 1 1 auto;
-  padding-right: 70px;
+  padding-right: 30px;
 }
 
 @media all and (max-width: 769px) {
@@ -2931,7 +2935,7 @@ footer a + a {
 }
 
 .modal .close {
-  position: absolute;
+  position: fixed;
   top: 60px;
   right: 60px;
   width: 25px;
@@ -3108,6 +3112,18 @@ footer a + a {
 
 .license_overlay {
   background: #fff url("../img/modal_cloud.svg") no-repeat top 150px right;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.license_overlay img {
+  border: 1px solid #333;
+  margin-bottom: 120px;
+}
+
+.license_overlay h2 {
+  margin-bottom: 30px;
+  padding-left: 20px;
 }
 
 @media all and (max-width: 767px) {

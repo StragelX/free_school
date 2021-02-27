@@ -2,6 +2,8 @@
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       autoplay: true,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
     });
 
     $('.modal .close').click(function(){
