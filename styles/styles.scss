@@ -1280,7 +1280,7 @@ footer {
 }
 
 .school_format {
-  height: 780px;
+  height: 850px;
   padding-top: 85px;
   padding-bottom: 145px;
   background: url("../img/study_format_bg.jpg") no-repeat center / cover;
@@ -1825,10 +1825,15 @@ footer {
 
     &:hover {
       .content {
-        max-height: 500px;
+        max-height: 2500px;
         transition: max-height 360ms;
       }
     }
+  }
+
+  iframe {
+    height: 400px;
+    width: 100%;
   }
 
   .img_wrap {
@@ -1844,6 +1849,11 @@ footer {
       object-fit: cover;
       object-position: center;
     }
+  }
+
+  .inner_img {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .news_title {
@@ -1869,6 +1879,10 @@ footer {
     max-height: 29px;
     overflow: hidden;
     transition: max-height 360ms;
+
+    b {
+      font-weight: bold;
+    }
   }
 }
 
