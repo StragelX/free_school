@@ -2795,6 +2795,14 @@ footer a + a {
   margin-bottom: 10px;
 }
 
+.news a.news_title {
+  display: block;
+}
+
+.news a.news_title:hover {
+  text-decoration: underline;
+}
+
 .news .content {
   font-family: Plumb;
   font-size: 12px;

@@ -1920,6 +1920,14 @@ footer {
     margin-bottom: 10px;
   }
 
+  a.news_title {
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .content {
     font-family: Plumb;
     font-size: 12px;
