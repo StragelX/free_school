@@ -2091,6 +2091,35 @@ footer a + a {
   color: #413e6f;
 }
 
+.video_wrap iframe {
+  width: 100%;
+  height: 660px;
+}
+
+@media all and (max-width: 1025px) {
+  .video_wrap iframe {
+    height: 560px;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .video_wrap iframe {
+    height: 415px;
+  }
+}
+
+@media all and (max-width: 415px) {
+  .video_wrap iframe {
+    height: 217px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .video_wrap iframe {
+    height: 193px;
+  }
+}
+
 .school_format {
   height: 850px;
   padding-top: 85px;
@@ -2723,7 +2752,7 @@ footer a + a {
 }
 
 .news .one:hover .content {
-  max-height: 2500px;
+  max-height: 500px;
   transition: max-height 360ms;
 }
 
