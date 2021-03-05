@@ -2325,3 +2325,88 @@ footer {
     background: #fff;
   }
 }
+
+article {
+  .top {
+    padding-top: 130px;
+    padding-bottom: 40px;
+    background-color: #fa6e00;
+
+    .container {
+      max-width: 1180px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 50px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: -0.26px;
+      line-height: 61px;
+      text-align: left;
+      margin-bottom: 21px;
+
+      @media all and (max-width: 769px) {
+        font-size: 36px;
+        line-height: 46px;
+      }
+    }
+
+    .date {
+      display: block;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: -0.12px;
+      line-height: normal;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 80px;
+      display: block;
+      width: 330px;
+      height: 300px;
+      z-index: 2;
+      background: url("../img/values_cloud.png") no-repeat top right/contain;
+
+      @media all and (max-width: 1450px) {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    p {
+      color: #413e6f;
+      font-size: 22px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 36px;
+      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  .container {
+    max-width: 900px;
+  }
+}
